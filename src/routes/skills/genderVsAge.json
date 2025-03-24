@@ -1,0 +1,12 @@
+[
+  {
+    "gender": "Male",
+    "age": 30,
+    "count": 18
+  },
+  {
+    "gender": "Female",
+    "age": 28,
+    "count": 22
+  }
+]

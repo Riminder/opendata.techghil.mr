@@ -1,0 +1,12 @@
+[
+  {
+    "age": 25,
+    "family": "Tech",
+    "count": 10
+  },
+  {
+    "age": 40,
+    "family": "HR",
+    "count": 20
+  }
+]

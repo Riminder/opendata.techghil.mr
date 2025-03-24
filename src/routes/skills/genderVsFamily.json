@@ -1,0 +1,12 @@
+[
+  {
+    "gender": "Male",
+    "family": "Tech",
+    "count": 50
+  },
+  {
+    "gender": "Female",
+    "family": "HR",
+    "count": 45
+  }
+]
