@@ -42,9 +42,7 @@ Techghil Mauritanie est une application SvelteKit conçue pour fournir des stati
 7. [Directives de Contribution](#7-directives-de-contribution)
 8. [Versionnage](#8-versionnage)
 9. [Directives de Message de Commit](#9-directives-de-message-de-commit)
-10. [Utilisation de Docker](#10-utilisation-de-docker)
-11. [Utilisation de Makefile](#11-utilisation-de-makefile)
-12. [Licence](#12-licence)
+10. [Licence](#12-licence)
 
 ## 1. Aperçu du Projet
 
@@ -202,49 +200,6 @@ Nous suivons la spécification [Conventional Commits](https://www.conventionalco
 - `test` : Ajout de tests manquants ou correction de tests existants
 - `chore` : Modifications du processus de build ou des outils auxiliaires et des bibliothèques telles que la génération de documentation
 
-## 10. Utilisation de Docker
-
-Pour construire et exécuter le projet en utilisant Docker :
-
-1. Construisez l'image Docker :
-    ```bash
-    docker build -t techghil-mauritanie .
-    ```
-
-2. Exécutez le conteneur Docker :
-    ```bash
-    docker run -p 3000:3000 techghil-mauritanie
-    ```
-
-## 11. Utilisation de Makefile
-
-Vous pouvez utiliser le Makefile pour simplifier les tâches courantes :
-
-- Installer les dépendances :
-    ```bash
-    make install
-    ```
-
-- Démarrer le serveur de développement :
-    ```bash
-    make dev
-    ```
-
-- Construire le projet :
-    ```bash
-    make build
-    ```
-
-- Construire l'image Docker :
-    ```bash
-    make docker-build
-    ```
-
-- Exécuter le conteneur Docker :
-    ```bash
-    make docker-run
-    ```
-
-## 12. Licence
+## 10. Licence
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
