@@ -56,7 +56,7 @@
 
 1. استنساخ المستودع:
     ```bash
-    git clone https://github.com/yourusername/opendata.techghil.mr.git
+    git clone https://github.com/Riminder/opendata.techghil.mr.git
     cd opendata.techghil.mr
     ```
 

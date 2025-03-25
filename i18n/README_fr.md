@@ -56,7 +56,7 @@ Pour configurer le projet localement, suivez ces étapes :
 
 1. Clonez le dépôt :
     ```bash
-    git clone https://github.com/yourusername/opendata.techghil.mr.git
+    git clone https://github.com/Riminder/opendata.techghil.mr.git
     cd opendata.techghil.mr
     ```
 
