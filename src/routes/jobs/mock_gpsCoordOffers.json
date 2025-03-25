@@ -1,0 +1,128 @@
+[
+  {
+    "cluster_id": 0,
+    "num_points": 21,
+    "name": "Location 1",
+    "center": {
+      "lat": -19.44752,
+      "lng": -43.692305
+    }
+  },
+  {
+    "cluster_id": 1,
+    "num_points": 57,
+    "name": "Location 2",
+    "center": {
+      "lat": -41.198117,
+      "lng": 113.417544
+    }
+  },
+  {
+    "cluster_id": 2,
+    "num_points": 19,
+    "name": "Location 3",
+    "center": {
+      "lat": 83.290403,
+      "lng": 96.778324
+    }
+  },
+  {
+    "cluster_id": 3,
+    "num_points": 96,
+    "name": "Location 4",
+    "center": {
+      "lat": -22.936135,
+      "lng": -109.10409
+    }
+  },
+  {
+    "cluster_id": 4,
+    "num_points": 20,
+    "name": "Location 5",
+    "center": {
+      "lat": 88.031589,
+      "lng": 123.119535
+    }
+  },
+  {
+    "cluster_id": 5,
+    "num_points": 50,
+    "name": "Location 6",
+    "center": {
+      "lat": 25.695925,
+      "lng": 31.359613
+    }
+  },
+  {
+    "cluster_id": 6,
+    "num_points": 85,
+    "name": "Location 7",
+    "center": {
+      "lat": -41.289904,
+      "lng": -82.153356
+    }
+  },
+  {
+    "cluster_id": 7,
+    "num_points": 84,
+    "name": "Location 8",
+    "center": {
+      "lat": -40.640462,
+      "lng": -153.562211
+    }
+  },
+  {
+    "cluster_id": 8,
+    "num_points": 97,
+    "name": "Location 9",
+    "center": {
+      "lat": -65.73517,
+      "lng": 59.644315
+    }
+  },
+  {
+    "cluster_id": 9,
+    "num_points": 70,
+    "name": "Location 10",
+    "center": {
+      "lat": -42.890348,
+      "lng": -43.578841
+    }
+  },
+  {
+    "cluster_id": 10,
+    "num_points": 48,
+    "name": "Location 11",
+    "center": {
+      "lat": 75.382447,
+      "lng": 126.980709
+    }
+  },
+  {
+    "cluster_id": 11,
+    "num_points": 92,
+    "name": "Location 12",
+    "center": {
+      "lat": -1.491006,
+      "lng": -136.455617
+    }
+  },
+  {
+    "cluster_id": 12,
+    "num_points": 42,
+    "name": "Location 13",
+    "center": {
+      "lat": -16.712865,
+      "lng": 122.52848
+    }
+  },
+  {
+    "cluster_id": 13,
+    "num_points": 95,
+    "name": "Location 14",
+    "center": {
+      "lat": 3.320821,
+      "lng": 176.873309
+    }
+  }
+]

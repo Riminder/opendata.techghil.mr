@@ -1,0 +1,58 @@
+{
+  "labels": [
+    "Installation et Maintenance",
+    "Services à la personne et à la collectivité",
+    "Agriculture et Pêche, Espaces naturels et Espaces verts, Soins aux animaux",
+    "Industrie",
+    "Santé",
+    "Transport et Logistique",
+    "Commerce, Vente et Grande distribution",
+    "Communication, Média et Multimédia",
+    "Support à l'entreprise",
+    "Banque, Assurance, Immobilier",
+    "Hôtellerie-Restauration, Tourisme, Loisirs et Animation",
+    "Arts et Façonnage d'ouvrages d'art",
+    "Spectacle",
+    "Construction, Bâtiment et Travaux publics"
+  ],
+  "datasets": [
+    {
+      "label": "male",
+      "data": [
+        80,
+        45,
+        39,
+        50,
+        89,
+        79,
+        95,
+        77,
+        1,
+        95,
+        25,
+        93,
+        77,
+        86
+      ]
+    },
+    {
+      "label": "female",
+      "data": [
+        67,
+        58,
+        52,
+        68,
+        86,
+        52,
+        46,
+        45,
+        23,
+        93,
+        74,
+        88,
+        96,
+        48
+      ]
+    }
+  ]
+}

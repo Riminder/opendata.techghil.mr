@@ -1,0 +1,106 @@
+[
+  {
+    "range": "<2000",
+    "amount": 1437
+  },
+  {
+    "range": "2000",
+    "amount": 1162
+  },
+  {
+    "range": "2001",
+    "amount": 87
+  },
+  {
+    "range": "2002",
+    "amount": 655
+  },
+  {
+    "range": "2003",
+    "amount": 1139
+  },
+  {
+    "range": "2004",
+    "amount": 822
+  },
+  {
+    "range": "2005",
+    "amount": 1055
+  },
+  {
+    "range": "2006",
+    "amount": 1972
+  },
+  {
+    "range": "2007",
+    "amount": 706
+  },
+  {
+    "range": "2008",
+    "amount": 40
+  },
+  {
+    "range": "2009",
+    "amount": 477
+  },
+  {
+    "range": "2010",
+    "amount": 1035
+  },
+  {
+    "range": "2011",
+    "amount": 698
+  },
+  {
+    "range": "2012",
+    "amount": 524
+  },
+  {
+    "range": "2013",
+    "amount": 452
+  },
+  {
+    "range": "2014",
+    "amount": 470
+  },
+  {
+    "range": "2015",
+    "amount": 1865
+  },
+  {
+    "range": "2016",
+    "amount": 1396
+  },
+  {
+    "range": "2017",
+    "amount": 1742
+  },
+  {
+    "range": "2018",
+    "amount": 596
+  },
+  {
+    "range": "2019",
+    "amount": 1508
+  },
+  {
+    "range": "2020",
+    "amount": 1999
+  },
+  {
+    "range": "2021",
+    "amount": 934
+  },
+  {
+    "range": "2022",
+    "amount": 1547
+  },
+  {
+    "range": "2023",
+    "amount": 254
+  },
+  {
+    "range": "2024",
+    "amount": 538
+  }
+]

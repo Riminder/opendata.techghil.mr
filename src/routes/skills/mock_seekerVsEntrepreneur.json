@@ -1,0 +1,12 @@
+{
+  "datasets": [
+    {
+      "label": "Chercheurs d'emploi",
+      "value": 7403
+    },
+    {
+      "label": "Porteurs de projet",
+      "value": 3929
+    }
+  ]
+}
