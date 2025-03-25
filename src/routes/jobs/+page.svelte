@@ -3,10 +3,10 @@
     import Barchart from "$lib/charts/Barchart.svelte";
     import Map from "$lib/charts/Map.svelte";
 
-    import gpsCoordCandidates from "./mock_gpsCoordCandidates.json"
-    import gpsCoordOffers from  "./mock_gpsCoordOffers.json"
-    import regions from "./mock_regionCount.json"
-    import agenceVsFamily from "./mock_agenceVsFamily.json"
+    import gpsCoordCandidates from "$data/mock_gpsCoordCandidates.json"
+    import gpsCoordOffers from  "$data/mock_gpsCoordOffers.json"
+    import regions from "$data/mock_regionCount.json"
+    import agenceVsFamily from "$data/mock_agenceVsFamily.json"
     
     let selectedAgency = $state(agenceVsFamily.datasets[0].label ?? "None")
 </script>
