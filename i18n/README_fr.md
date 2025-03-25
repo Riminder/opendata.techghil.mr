@@ -33,18 +33,18 @@ Techghil Mauritanie est une application SvelteKit conçue pour fournir des stati
 
 ## Table des Matières
 
-1. [Aperçu du Projet](#aperçu-du-projet)
-2. [Commencer](#commencer)
-3. [Construire le Projet](#construire-le-projet)
-4. [Structure des Données](#structure-des-données)
-5. [Créer des Visualisations](#créer-des-visualisations)
-6. [Exemple de Jeu de Données](#exemple-de-jeu-de-données)
-7. [Directives de Contribution](#directives-de-contribution)
-8. [Versionnage](#versionnage)
-9. [Directives de Message de Commit](#directives-de-message-de-commit)
-10. [Utilisation de Docker](#utilisation-de-docker)
-11. [Utilisation de Makefile](#utilisation-de-makefile)
-12. [Licence](#licence)
+1. [Aperçu du Projet](#1-aperçu-du-projet)
+2. [Commencer](#2-commencer)
+3. [Construire le Projet](#3-construire-le-projet)
+4. [Structure des Données](#4-structure-des-données)
+5. [Créer des Visualisations](#5-créer-des-visualisations)
+6. [Exemple de Jeu de Données](#6-exemple-de-jeu-de-données)
+7. [Directives de Contribution](#7-directives-de-contribution)
+8. [Versionnage](#8-versionnage)
+9. [Directives de Message de Commit](#9-directives-de-message-de-commit)
+10. [Utilisation de Docker](#10-utilisation-de-docker)
+11. [Utilisation de Makefile](#11-utilisation-de-makefile)
+12. [Licence](#12-licence)
 
 ## 1. Aperçu du Projet
 

@@ -33,18 +33,18 @@ Techghil Mauritanie is a SvelteKit application designed to provide official stat
 
 ## Table of Contents
 
-1. [Project Overview](#project-overview)
-2. [Getting Started](#getting-started)
-3. [Building the Project](#building-the-project)
-4. [Data Structure](#data-structure)
-5. [Creating Visualizations](#creating-visualizations)
-6. [Sample Dataset](#sample-dataset)
-7. [Contributing Guidelines](#contributing-guidelines)
-8. [Versioning](#versioning)
-9. [Commit Message Guidelines](#commit-message-guidelines)
-10. [Using Docker](#using-docker)
-11. [Using Makefile](#using-makefile)
-12. [License](#license)
+1. [Project Overview](#1-project-overview)
+2. [Getting Started](#2-getting-started)
+3. [Building the Project](#3-building-the-project)
+4. [Data Structure](#4-data-structure)
+5. [Creating Visualizations](#5-creating-visualizations)
+6. [Sample Dataset](#6-sample-dataset)
+7. [Contributing Guidelines](#7-contributing-guidelines)
+8. [Versioning](#8-versioning)
+9. [Commit Message Guidelines](#9-commit-message-guidelines)
+10. [Using Docker](#10-using-docker)
+11. [Using Makefile](#11-using-makefile)
+12. [License](#12-license)
 
 ## 1. Project Overview
 
