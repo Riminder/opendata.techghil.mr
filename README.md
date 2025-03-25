@@ -1,31 +1,79 @@
-# sv
+# Techghil Mauritanie
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+<p align="center">
+  <a href="https://techghil.mr/">
+    <img src="static/logo-techghil.png" alt="Techghil Logo" width="200">
+  </a>
+</p>
 
-## Creating a project
+<p align="center">
+  <a href="https://kit.svelte.dev/">
+    <img src="https://img.shields.io/badge/SvelteKit-1.0-orange" alt="SvelteKit">
+  </a>
+  <a href="https://www.typescriptlang.org/">
+    <img src="https://img.shields.io/badge/TypeScript-4.0-blue" alt="TypeScript">
+  </a>
+  <a href="https://tailwindcss.com/">
+    <img src="https://img.shields.io/badge/TailwindCSS-2.0-blue" alt="TailwindCSS">
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
+  </a>
+</p>
 
-If you're seeing this, you've probably already done this step. Congrats!
+<h4 align="center">
+    <p>
+        <b>English</b> |
+        <a href="i18n/README_fr.md">Français</a> |
+        <a href="i18n/README_ar.md">العربية</a>
+    </p>
+</h4>
 
-```bash
-# create a new project in the current directory
-npx sv create
+Techghil Mauritanie is a SvelteKit application designed to provide official statistics on employment in Mauritania. The project visualizes data using various charts and maps to offer insights into employment trends.
 
-# create a new project in my-app
-npx sv create my-app
-```
+## Table of Contents
 
-## Developing
+1. [Project Overview](#1-project-overview)
+2. [Getting Started](#2-getting-started)
+3. [Building the Project](#3-building-the-project)
+4. [Data Structure](#4-data-structure)
+5. [Creating Visualizations](#5-creating-visualizations)
+6. [Sample Dataset](#6-sample-dataset)
+7. [Contributing Guidelines](#7-contributing-guidelines)
+8. [Versioning](#8-versioning)
+9. [Commit Message Guidelines](#9-commit-message-guidelines)
+10. [License](#10-license)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## 1. Project Overview
 
-```bash
-npm run dev
+This project aims to present official employment statistics in Mauritania through interactive visualizations. It leverages SvelteKit for the frontend, TypeScript for type safety, and Tailwind CSS for styling. The visualizations are powered by libraries such as `chart.js` and `maplibre-gl`.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## 2. Getting Started
 
-## Building
+To set up the project locally, follow these steps:
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Riminder/opendata.techghil.mr.git
+    cd opendata.techghil.mr
+    ```
+
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+3. Start the development server:
+    ```bash
+    npm run dev
+    ```
+
+4. Open the app in a new browser tab:
+    ```bash
+    npm run dev -- --open
+    ```
+
+## 3. Building the Project
 
 To create a production version of your app:
 
@@ -33,6 +81,125 @@ To create a production version of your app:
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+You can preview the production build with:
+
+```bash
+npm run preview
+```
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+## 4. Data Structure
+
+The data for visualizations is stored in JSON files. Here is an example of the data structure:
+
+```json
+{
+  "year": 2025,
+  "employment": {
+    "total": 1000000,
+    "sectors": {
+      "agriculture": 250000,
+      "industry": 300000,
+      "services": 450000
+    }
+  }
+}
+```
+
+## 5. Creating Visualizations
+
+To create a graph from the data, follow these steps:
+
+1. Import the necessary libraries and data:
+    ```javascript
+    import { Bar } from 'chart.js';
+    import data from './data/employment.json';
+    ```
+
+2. Prepare the data for the chart:
+    ```javascript
+    const labels = Object.keys(data.employment.sectors);
+    const values = Object.values(data.employment.sectors);
+
+    const chartData = {
+      labels: labels,
+      datasets: [{
+        label: 'Employment by Sector',
+        data: values,
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+      }]
+    };
+    ```
+
+3. Create the chart:
+    ```javascript
+    const ctx = document.getElementById('myChart').getContext('2d');
+    new Bar(ctx, {
+      type: 'bar',
+      data: chartData,
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+    ```
+
+## 6. Sample Dataset
+
+Here is a sample of the anonymized dataset:
+
+```json
+{
+  "year": 2025,
+  "employment": {
+    "total": 1000000,
+    "sectors": {
+      "agriculture": 250000,
+      "industry": 300000,
+      "services": 450000
+    }
+  }
+}
+```
+
+## 7. Contributing Guidelines
+
+We welcome contributions! To contribute, follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add new feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Create a Pull Request.
+
+For any questions or support, please contact:
+
+- [xxx@techghil.mr](mailto:xxx@techghil.mr)
+- [yyy@techghil.mr](mailto:yyy@techghil.mr)
+
+## 8. Versioning
+
+We use [Semantic Versioning](https://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/yourusername/opendata.techghil.mr/tags).
+
+## 9. Commit Message Guidelines
+
+We follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification for our commit messages:
+
+- `feat`: A new feature
+- `fix`: A bug fix
+- `docs`: Documentation only changes
+- `style`: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- `refactor`: A code change that neither fixes a bug nor adds a feature
+- `perf`: A code change that improves performance
+- `test`: Adding missing or correcting existing tests
+- `chore`: Changes to the build process or auxiliary tools and libraries such as documentation generation
+
+## 10. License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
