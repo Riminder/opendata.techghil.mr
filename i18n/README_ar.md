@@ -1,8 +1,8 @@
-# تكغيل موريتانيا
+# Techghil Mauritanie
 
 <p align="center">
   <a href="https://techghil.mr/">
-    <img src="../static/logo-techghil.png" alt="شعار تكغيل" width="200">
+    <img src="../static/logo-techghil.png" alt="Techghil Logo" width="200">
   </a>
 </p>
 
@@ -23,13 +23,13 @@
 
 <h4 align="center">
     <p>
-        <a href="../README.md">English</a> |
-        <a href="README_fr.md">Français</a> |
-        <b>العربية</b>
+        <b>English</b> |
+        <a href="i18n/README_fr.md">Français</a> |
+        <a href="i18n/README_ar.md">العربية</a>
     </p>
 </h4>
 
-تكغيل موريتانيا هو تطبيق SvelteKit مصمم لتوفير إحصاءات رسمية عن التوظيف في موريتانيا. يعرض المشروع البيانات باستخدام رسوم بيانية وخرائط متنوعة لتقديم رؤى حول اتجاهات التوظيف.
+Techghil Mauritanie هو تطبيق SvelteKit مصمم لتوفير إحصاءات رسمية عن التوظيف في موريتانيا. يقوم المشروع بتصور البيانات باستخدام مخططات وخرائط متنوعة لتقديم رؤى حول اتجاهات التوظيف.
 
 ## جدول المحتويات
 
@@ -38,15 +38,14 @@
 3. [بناء المشروع](#3-بناء-المشروع)
 4. [هيكل البيانات](#4-هيكل-البيانات)
 5. [إنشاء التصورات](#5-إنشاء-التصورات)
-6. [عينة من مجموعة البيانات](#6-عينة-من-مجموعة-البيانات)
-7. [إرشادات المساهمة](#7-إرشادات-المساهمة)
-8. [إصدار النسخ](#8-إصدار-النسخ)
-9. [إرشادات رسائل الالتزام](#9-إرشادات-رسائل-الالتزام)
-10. [الرخصة](#10-الرخصة)
+6. [إرشادات المساهمة](#6-إرشادات-المساهمة)
+7. [إصدار النسخ](#7-إصدار-النسخ)
+8. [إرشادات رسالة الالتزام](#8-إرشادات-رسالة-الالتزام)
+9. [الترخيص](#9-الترخيص)
 
 ## 1. نظرة عامة على المشروع
 
-يهدف هذا المشروع إلى تقديم إحصاءات رسمية عن التوظيف في موريتانيا من خلال تصورات تفاعلية. يستخدم SvelteKit للواجهة الأمامية، TypeScript لأمان الأنواع، وTailwind CSS للتصميم. يتم تشغيل التصورات بواسطة مكتبات مثل `chart.js` و `maplibre-gl`.
+يهدف هذا المشروع إلى تقديم إحصاءات التوظيف الرسمية في موريتانيا من خلال تصورات تفاعلية. يستخدم SvelteKit للواجهة الأمامية، TypeScript لأمان الأنواع، و Tailwind CSS للتصميم. يتم تشغيل التصورات بواسطة مكتبات مثل `chart.js` و `maplibre-gl`.
 
 ## 2. البدء
 
@@ -68,7 +67,7 @@
     npm run dev
     ```
 
-4. افتح التطبيق في علامة تبويب جديدة في المتصفح:
+4. فتح التطبيق في علامة تبويب جديدة في المتصفح:
     ```bash
     npm run dev -- --open
     ```
@@ -87,23 +86,149 @@ npm run build
 npm run preview
 ```
 
-> لنشر تطبيقك، قد تحتاج إلى تثبيت [مهايئ](https://svelte.dev/docs/kit/adapters) لبيئة الاستهداف الخاصة بك.
+> لنشر تطبيقك، قد تحتاج إلى تثبيت [محول](https://svelte.dev/docs/kit/adapters) لبيئة الهدف الخاصة بك.
 
 ## 4. هيكل البيانات
 
-يتم تخزين البيانات للتصورات في ملفات JSON. إليك مثال على هيكل البيانات:
+يتم تخزين البيانات للتصورات في ملفات JSON. فيما يلي أمثلة على تنسيق البيانات المتوقع للتصورات المختلفة:
+
+### 4.1 مصفوفة من الكائنات
+
+يُستخدم هذا التنسيق للبيانات التي تتضمن إدخالات متعددة بسمات محددة.
+
+ملف: `mock_gpsCoordCandidates.json`
+
+```json
+[
+  {
+    "center": { "lat": 18.079, "lng": -15.965 },
+    "num_points": 5
+  },
+  {
+    "center": { "lat": 16.617, "lng": -11.406 },
+    "num_points": 3
+  }
+]
+```
+
+### 4.2 مصفوفة من الكائنات مع سمات إضافية
+
+هذا التنسيق مشابه للتنسيق السابق ولكنه يتضمن سمات إضافية لكل إدخال.
+
+ملف: `mock_gpsCoordOffers.json`
+
+```json
+[
+  {
+    "center": { "lat": 18.079, "lng": -15.965 },
+    "num_points": 10,
+    "name": "Nouakchott"
+  },
+  {
+    "center": { "lat": 16.617, "lng": -11.406 },
+    "num_points": 7,
+    "name": "Nouadhibou"
+  }
+]
+```
+
+### 4.3 أزواج المفتاح والقيمة
+
+يُستخدم هذا التنسيق للبيانات التي تربط المفاتيح بالقيم.
+
+ملف: `mock_regionCount.json`
 
 ```json
 {
-  "year": 2025,
-  "employment": {
-    "total": 1000000,
-    "sectors": {
-      "agriculture": 250000,
-      "industry": 300000,
-      "services": 450000
+  "Nouakchott": 500,
+  "Nouadhibou": 300,
+  "Atar": 200
+}
+```
+
+### 4.4 تسميات ومجموعات البيانات
+
+يُستخدم هذا التنسيق للبيانات التي تتضمن تسميات ومجموعات بيانات مقابلة.
+
+ملف: `mock_agenceVsFamily.json`
+
+```json
+{
+  "labels": [
+    "Installation et Maintenance",
+    "Services à la personne et à la collectivité",
+    "Agriculture et Pêche, Espaces naturels et Espaces verts, Soins aux animaux",
+    "Industrie",
+    "Santé",
+    "Transport et Logistique",
+    "Commerce, Vente et Grande distribution",
+    "Communication, Média et Multimédia",
+    "Support à l'entreprise",
+    "Banque, Assurance, Immobilier",
+    "Hôtellerie-Restauration, Tourisme, Loisirs et Animation",
+    "Arts et Façonnage d'ouvrages d'art",
+    "Spectacle",
+    "Construction, Bâtiment et Travaux publics"
+  ],
+  "datasets": [
+    {
+      "label": "Agency A",
+      "data": [
+        2,
+        13,
+        11,
+        9,
+        35,
+        17,
+        4,
+        23,
+        38,
+        17,
+        7,
+        12,
+        2,
+        19
+      ]
+    },
+    {
+      "label": "Agency B",
+      "data": [
+        16,
+        34,
+        40,
+        11,
+        14,
+        39,
+        12,
+        27,
+        34,
+        17,
+        5,
+        22,
+        4,
+        35
+      ]
+    },
+    {
+      "label": "Agency C",
+      "data": [
+        4,
+        17,
+        17,
+        35,
+        40,
+        9,
+        4,
+        18,
+        40,
+        35,
+        15,
+        39,
+        32,
+        6
+      ]
     }
-  }
+  ]
 }
 ```
 
@@ -111,21 +236,25 @@ npm run preview
 
 لإنشاء رسم بياني من البيانات، اتبع هذه الخطوات:
 
+### 5.1 مخطط شريطي
+
+يُستخدم المخطط الشريطي لعرض البيانات باستخدام أشرطة مستطيلة.
+
 1. استيراد المكتبات والبيانات اللازمة:
     ```javascript
     import { Bar } from 'chart.js';
-    import data from './data/employment.json';
+    import data from './data/mock_regionCount.json';
     ```
 
 2. إعداد البيانات للرسم البياني:
     ```javascript
-    const labels = Object.keys(data.employment.sectors);
-    const values = Object.values(data.employment.sectors);
+    const labels = Object.keys(data);
+    const values = Object.values(data);
 
     const chartData = {
       labels: labels,
       datasets: [{
-        label: 'التوظيف حسب القطاع',
+        label: 'Region Count',
         data: values,
         backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
       }]
@@ -149,47 +278,64 @@ npm run preview
     });
     ```
 
-## 6. عينة من مجموعة البيانات
+### 5.2 تصور الخريطة
 
-إليك عينة من مجموعة البيانات المجهولة:
+يُستخدم تصور الخريطة لعرض البيانات الجغرافية.
 
-```json
-{
-  "year": 2025,
-  "employment": {
-    "total": 1000000,
-    "sectors": {
-      "agriculture": 250000,
-      "industry": 300000,
-      "services": 450000
-    }
-  }
-}
-```
+1. استيراد المكتبات والبيانات اللازمة:
+    ```javascript
+    import Map from 'maplibre-gl';
+    import data from './data/mock_gpsCoordCandidates.json';
+    ```
 
-## 7. إرشادات المساهمة
+2. إعداد البيانات للخريطة:
+    ```javascript
+    const markers = data.map(entry => ({
+      coordinates: [entry.center.lng, entry.center.lat],
+      number: entry.num_points
+    }));
+    ```
+
+3. إنشاء الخريطة:
+    ```javascript
+    const map = new Map({
+      container: 'map', // container ID
+      style: 'https://demotiles.maplibre.org/style.json', // style URL
+      center: [0, 0], // starting position [lng, lat]
+      zoom: 2 // starting zoom
+    });
+
+    markers.forEach(marker => {
+      new maplibre.Marker()
+        .setLngLat(marker.coordinates)
+        .setPopup(new maplibre.Popup().setText(`Number of points: ${marker.number}`))
+        .addTo(map);
+    });
+    ```
+
+## 6. إرشادات المساهمة
 
 نرحب بالمساهمات! للمساهمة، اتبع هذه الخطوات:
 
 1. استنساخ المستودع.
 2. إنشاء فرع جديد (`git checkout -b feature-branch`).
 3. قم بإجراء التغييرات الخاصة بك.
-4. التزم بتغييراتك (`git commit -m 'إضافة ميزة جديدة'`).
+4. التزم بتغييراتك (`git commit -m 'Add new feature'`).
 5. ادفع إلى الفرع (`git push origin feature-branch`).
 6. إنشاء طلب سحب.
 
 لأي أسئلة أو دعم، يرجى الاتصال بـ:
 
-- [xxx@techghil.mr](mailto:xxx@techghil.mr)
-- [yyy@techghil.mr](mailto:yyy@techghil.mr)
+- [ismail@techghil.mr](mailto:ismail@techghil.mr)
+- [ahmedou@dcs-sarl.com](mailto:ahmedou@dcs-sarl.com)
 
-## 8. إصدار النسخ
+## 7. إصدار النسخ
 
-نستخدم [الإصدار الدلالي](https://semver.org/) لإصدار النسخ. للحصول على الإصدارات المتاحة، راجع [العلامات على هذا المستودع](https://github.com/yourusername/opendata.techghil.mr/tags).
+نحن نستخدم [الإصدار الدلالي](https://semver.org/) لإصدار النسخ. للحصول على الإصدارات المتاحة، راجع [العلامات على هذا المستودع](https://github.com/yourusername/opendata.techghil.mr/tags).
 
-## 9. إرشادات رسائل الالتزام
+## 8. إرشادات رسالة الالتزام
 
-نتبع مواصفات [الالتزامات التقليدية](https://www.conventionalcommits.org/en/v1.0.0/) لرسائل الالتزام الخاصة بنا:
+نحن نتبع مواصفات [الالتزامات التقليدية](https://www.conventionalcommits.org/en/v1.0.0/) لرسائل الالتزام الخاصة بنا:
 
 - `feat`: ميزة جديدة
 - `fix`: إصلاح خطأ
@@ -200,6 +346,6 @@ npm run preview
 - `test`: إضافة اختبارات مفقودة أو تصحيح اختبارات موجودة
 - `chore`: تغييرات في عملية البناء أو الأدوات المساعدة والمكتبات مثل توليد الوثائق
 
-## 10. الرخصة
+## 9. الترخيص
 
-هذا المشروع مرخص بموجب رخصة MIT. راجع ملف [LICENSE](LICENSE) لمزيد من التفاصيل.
+هذا المشروع مرخص بموجب ترخيص MIT. راجع ملف [LICENSE](LICENSE) لمزيد من التفاصيل.
