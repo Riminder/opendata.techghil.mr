@@ -1,0 +1,96 @@
+{
+  "labels": [
+    "Services à la personne et à la collectivité",
+    "Agriculture et Pêche, Espaces naturels et Espaces verts, Soins aux animaux",
+    "Industrie",
+    "Santé",
+    "Transport et Logistique",
+    "Commerce, Vente et Grande distribution",
+    "Support à l'entreprise",
+    "Installation et Maintenance",
+    "Banque, Assurance, Immobilier",
+    "Communication, Média et Multimédia",
+    "Hôtellerie-Restauration, Tourisme, Loisirs et Animation",
+    "Arts et Façonnage d'ouvrages d'art",
+    "Spectacle",
+    "Construction, Bâtiment et Travaux publics"
+  ],
+  "datasets": [
+    {
+      "label": "18-23",
+      "data": [
+        5,
+        40,
+        61,
+        67,
+        25,
+        36,
+        45,
+        11,
+        40,
+        13,
+        49,
+        2,
+        55,
+        80
+      ]
+    },
+    {
+      "label": "24-34",
+      "data": [
+        63,
+        17,
+        8,
+        48,
+        31,
+        32,
+        61,
+        60,
+        70,
+        16,
+        60,
+        62,
+        12,
+        20
+      ]
+    },
+    {
+      "label": "35-49",
+      "data": [
+        57,
+        77,
+        51,
+        31,
+        40,
+        56,
+        71,
+        68,
+        33,
+        5,
+        78,
+        78,
+        29,
+        43
+      ]
+    },
+    {
+      "label": "50-64",
+      "data": [
+        9,
+        13,
+        55,
+        78,
+        7,
+        71,
+        6,
+        5,
+        40,
+        33,
+        46,
+        60,
+        34,
+        34
+      ]
+    }
+  ]
+}

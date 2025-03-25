@@ -1,0 +1,18 @@
+[
+  {
+    "range": "0-6 mois",
+    "amount": 588
+  },
+  {
+    "range": "6-12 mois",
+    "amount": 786
+  },
+  {
+    "range": "1-2 an(s)",
+    "amount": 153
+  },
+  {
+    "range": "2+ ans",
+    "amount": 710
+  }
+]
