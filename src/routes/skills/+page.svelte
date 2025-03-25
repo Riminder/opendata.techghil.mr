@@ -5,12 +5,12 @@
     import LineChart from "$lib/charts/LineChart.svelte";
     import CustomViolinChart from "$lib/charts/CustomViolinChart.svelte";
 
-    import ageVsFamily from "data/mock_ageVsFamily.json";
-    import genderVsFamily from "data/mock_genderVsFamily.json";
-    import seekerVsEntrepreneur from "data/mock_seekerVsEntrepreneur.json";
-    import graduationYear from "data/mock_graduationYear.json";
-    import educationWorkGap from "data/mock_educationWorkGap.json";
-    import genderVsAge from "data/mock_genderVsAge.json";
+    import ageVsFamily from "$data/mock_ageVsFamily.json";
+    import genderVsFamily from "$data/mock_genderVsFamily.json";
+    import seekerVsEntrepreneur from "$data/mock_seekerVsEntrepreneur.json";
+    import graduationYear from "$data/mock_graduationYear.json";
+    import educationWorkGap from "$data/mock_educationWorkGap.json";
+    import genderVsAge from "$data/mock_genderVsAge.json";
 
     let selectedFamilyIndex = $state(0);
 </script>
