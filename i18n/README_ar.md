@@ -327,7 +327,7 @@ npm run preview
 لأي أسئلة أو دعم، يرجى الاتصال بـ:
 
 - [ismail@techghil.mr](mailto:ismail@techghil.mr)
-- [ahmedou@dcs-sarl.com](mailto:ahmedou@dcs-sarl.com)
+- [a.fettah@techghil.mr](mailto:a.fettah@techghil.mr)
 
 ## 7. إصدار النسخ
 
