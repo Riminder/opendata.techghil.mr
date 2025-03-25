@@ -182,8 +182,8 @@ npm run preview
 
 لأي أسئلة أو دعم، يرجى الاتصال بـ:
 
-- [اسم جهة الاتصال للعميل](mailto:client@example.com)
-- [اسمك](mailto:yourname@example.com)
+- [xxx@techghil.mr](mailto:xxx@techghil.mr)
+- [yyy@techghil.mr](mailto:yyy@techghil.mr)
 
 ## 8. إصدار النسخ
 

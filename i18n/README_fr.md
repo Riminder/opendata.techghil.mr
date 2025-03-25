@@ -182,8 +182,8 @@ Nous accueillons les contributions ! Pour contribuer, suivez ces étapes :
 
 Pour toute question ou support, veuillez contacter :
 
-- [Nom du Contact Client](mailto:client@example.com)
-- [Votre Nom](mailto:yourname@example.com)
+- [xxx@techghil.mr](mailto:xxx@techghil.mr)
+- [yyy@techghil.mr](mailto:yyy@techghil.mr)
 
 ## 8. Versionnage
 
