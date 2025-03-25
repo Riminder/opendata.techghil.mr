@@ -38,11 +38,10 @@ Techghil Mauritanie is a SvelteKit application designed to provide official stat
 3. [Building the Project](#3-building-the-project)
 4. [Data Structure](#4-data-structure)
 5. [Creating Visualizations](#5-creating-visualizations)
-6. [Sample Dataset](#6-sample-dataset)
-7. [Contributing Guidelines](#7-contributing-guidelines)
-8. [Versioning](#8-versioning)
-9. [Commit Message Guidelines](#9-commit-message-guidelines)
-10. [License](#10-license)
+6. [Contributing Guidelines](#6-contributing-guidelines)
+7. [Versioning](#7-versioning)
+8. [Commit Message Guidelines](#8-commit-message-guidelines)
+9. [License](#9-license)
 
 ## 1. Project Overview
 
@@ -91,19 +90,145 @@ npm run preview
 
 ## 4. Data Structure
 
-The data for visualizations is stored in JSON files. Here is an example of the data structure:
+The data for visualizations is stored in JSON files. Below are examples of the expected data format for various visualizations:
+
+### 4.1 Array of Objects
+
+This format is used for data that includes multiple entries with specific attributes.
+
+File: `mock_gpsCoordCandidates.json`
+
+```json
+[
+  {
+    "center": { "lat": 18.079, "lng": -15.965 },
+    "num_points": 5
+  },
+  {
+    "center": { "lat": 16.617, "lng": -11.406 },
+    "num_points": 3
+  }
+]
+```
+
+### 4.2 Array of Objects with Additional Attributes
+
+This format is similar to the previous one but includes additional attributes for each entry.
+
+File: `mock_gpsCoordOffers.json`
+
+```json
+[
+  {
+    "center": { "lat": 18.079, "lng": -15.965 },
+    "num_points": 10,
+    "name": "Nouakchott"
+  },
+  {
+    "center": { "lat": 16.617, "lng": -11.406 },
+    "num_points": 7,
+    "name": "Nouadhibou"
+  }
+]
+```
+
+### 4.3 Key-Value Pairs
+
+This format is used for data that maps keys to values.
+
+File: `mock_regionCount.json`
 
 ```json
 {
-  "year": 2025,
-  "employment": {
-    "total": 1000000,
-    "sectors": {
-      "agriculture": 250000,
-      "industry": 300000,
-      "services": 450000
+  "Nouakchott": 500,
+  "Nouadhibou": 300,
+  "Atar": 200
+}
+```
+
+### 4.4 Labels and Datasets
+
+This format is used for data that includes labels and corresponding datasets.
+
+File: `mock_agenceVsFamily.json`
+
+```json
+{
+  "labels": [
+    "Installation et Maintenance",
+    "Services à la personne et à la collectivité",
+    "Agriculture et Pêche, Espaces naturels et Espaces verts, Soins aux animaux",
+    "Industrie",
+    "Santé",
+    "Transport et Logistique",
+    "Commerce, Vente et Grande distribution",
+    "Communication, Média et Multimédia",
+    "Support à l'entreprise",
+    "Banque, Assurance, Immobilier",
+    "Hôtellerie-Restauration, Tourisme, Loisirs et Animation",
+    "Arts et Façonnage d'ouvrages d'art",
+    "Spectacle",
+    "Construction, Bâtiment et Travaux publics"
+  ],
+  "datasets": [
+    {
+      "label": "Agency A",
+      "data": [
+        2,
+        13,
+        11,
+        9,
+        35,
+        17,
+        4,
+        23,
+        38,
+        17,
+        7,
+        12,
+        2,
+        19
+      ]
+    },
+    {
+      "label": "Agency B",
+      "data": [
+        16,
+        34,
+        40,
+        11,
+        14,
+        39,
+        12,
+        27,
+        34,
+        17,
+        5,
+        22,
+        4,
+        35
+      ]
+    },
+    {
+      "label": "Agency C",
+      "data": [
+        4,
+        17,
+        17,
+        35,
+        40,
+        9,
+        4,
+        18,
+        40,
+        35,
+        15,
+        39,
+        32,
+        6
+      ]
     }
-  }
+  ]
 }
 ```
 
@@ -111,21 +236,25 @@ The data for visualizations is stored in JSON files. Here is an example of the d
 
 To create a graph from the data, follow these steps:
 
+### 5.1 Bar Chart
+
+A bar chart is used to display data with rectangular bars.
+
 1. Import the necessary libraries and data:
     ```javascript
     import { Bar } from 'chart.js';
-    import data from './data/employment.json';
+    import data from './data/mock_regionCount.json';
     ```
 
 2. Prepare the data for the chart:
     ```javascript
-    const labels = Object.keys(data.employment.sectors);
-    const values = Object.values(data.employment.sectors);
+    const labels = Object.keys(data);
+    const values = Object.values(data);
 
     const chartData = {
       labels: labels,
       datasets: [{
-        label: 'Employment by Sector',
+        label: 'Region Count',
         data: values,
         backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
       }]
@@ -149,25 +278,42 @@ To create a graph from the data, follow these steps:
     });
     ```
 
-## 6. Sample Dataset
+### 5.2 Map Visualization
 
-Here is a sample of the anonymized dataset:
+A map visualization is used to display geographical data.
 
-```json
-{
-  "year": 2025,
-  "employment": {
-    "total": 1000000,
-    "sectors": {
-      "agriculture": 250000,
-      "industry": 300000,
-      "services": 450000
-    }
-  }
-}
-```
+1. Import the necessary libraries and data:
+    ```javascript
+    import Map from 'maplibre-gl';
+    import data from './data/mock_gpsCoordCandidates.json';
+    ```
 
-## 7. Contributing Guidelines
+2. Prepare the data for the map:
+    ```javascript
+    const markers = data.map(entry => ({
+      coordinates: [entry.center.lng, entry.center.lat],
+      number: entry.num_points
+    }));
+    ```
+
+3. Create the map:
+    ```javascript
+    const map = new Map({
+      container: 'map', // container ID
+      style: 'https://demotiles.maplibre.org/style.json', // style URL
+      center: [0, 0], // starting position [lng, lat]
+      zoom: 2 // starting zoom
+    });
+
+    markers.forEach(marker => {
+      new maplibre.Marker()
+        .setLngLat(marker.coordinates)
+        .setPopup(new maplibre.Popup().setText(`Number of points: ${marker.number}`))
+        .addTo(map);
+    });
+    ```
+
+## 6. Contributing Guidelines
 
 We welcome contributions! To contribute, follow these steps:
 
@@ -180,14 +326,14 @@ We welcome contributions! To contribute, follow these steps:
 
 For any questions or support, please contact:
 
-- [xxx@techghil.mr](mailto:xxx@techghil.mr)
-- [yyy@techghil.mr](mailto:yyy@techghil.mr)
+- [ismail@techghil.mr](mailto:ismail@techghil.mr)
+- [ahmedou@dcs-sarl.com](mailto:ahmedou@dcs-sarl.com)
 
-## 8. Versioning
+## 7. Versioning
 
 We use [Semantic Versioning](https://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/yourusername/opendata.techghil.mr/tags).
 
-## 9. Commit Message Guidelines
+## 8. Commit Message Guidelines
 
 We follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification for our commit messages:
 
@@ -200,6 +346,6 @@ We follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0
 - `test`: Adding missing or correcting existing tests
 - `chore`: Changes to the build process or auxiliary tools and libraries such as documentation generation
 
-## 10. License
+## 9. License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
