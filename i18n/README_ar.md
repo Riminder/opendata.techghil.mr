@@ -331,7 +331,7 @@ npm run preview
 
 ## 7. إصدار النسخ
 
-نحن نستخدم [الإصدار الدلالي](https://semver.org/) لإصدار النسخ. للحصول على الإصدارات المتاحة، راجع [العلامات على هذا المستودع](https://github.com/yourusername/opendata.techghil.mr/tags).
+نحن نستخدم [الإصدار الدلالي](https://semver.org/) لإصدار النسخ. للحصول على الإصدارات المتاحة، راجع [العلامات على هذا المستودع](https://github.com/Riminder/opendata.techghil.mr/tags).
 
 ## 8. إرشادات رسالة الالتزام
 
