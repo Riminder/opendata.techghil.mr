@@ -331,7 +331,7 @@ For any questions or support, please contact:
 
 ## 7. Versioning
 
-We use [Semantic Versioning](https://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/yourusername/opendata.techghil.mr/tags).
+We use [Semantic Versioning](https://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/Riminder/opendata.techghil.mr/tags).
 
 ## 8. Commit Message Guidelines
 

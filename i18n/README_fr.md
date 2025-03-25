@@ -331,7 +331,7 @@ Pour toute question ou support, veuillez contacter :
 
 ## 7. Versionnage
 
-Nous utilisons le [versionnage sémantique](https://semver.org/) pour le versionnage. Pour les versions disponibles, consultez les [tags sur ce dépôt](https://github.com/yourusername/opendata.techghil.mr/tags).
+Nous utilisons le [versionnage sémantique](https://semver.org/) pour le versionnage. Pour les versions disponibles, consultez les [tags sur ce dépôt](https://github.com/Riminder/opendata.techghil.mr/tags).
 
 ## 8. Directives de message de commit
 
