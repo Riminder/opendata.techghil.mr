@@ -23,9 +23,9 @@
 
 <h4 align="center">
     <p>
-        <b>English</b> |
-        <a href="i18n/README_fr.md">Français</a> |
-        <a href="i18n/README_ar.md">العربية</a>
+        <a href="../README.md">English</a> |
+        <b>Français</b> |
+        <a href="./README_ar.md">العربية</a>
     </p>
 </h4>
 
